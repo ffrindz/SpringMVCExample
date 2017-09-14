@@ -32,10 +32,6 @@ public class LoginController {
 		
 		if(validatePassword(login)) {
 			model.addAttribute("student", student);
-//			model.addAttribute("name", "Zakir" );
-//			model.addAttribute("age", "28");
-//			model.addAttribute("rollNo", "8059");
-			
 			return "loginSuccess";
 		}else {
 			model.addAttribute("message", "User login was unsuccessful for "+login.getUsername());
