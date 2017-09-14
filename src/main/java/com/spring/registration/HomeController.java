@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.spring.common.Login;
 
 /**
- * Handles requests for the application home page.
+ * Handles requests for the registration page.
  */
 @Controller
 @RequestMapping(value = "/registration")

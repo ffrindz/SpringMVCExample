@@ -12,7 +12,7 @@ import com.spring.common.Login;
 import com.spring.common.Student;
 
 /**
- * Handles requests for the application home page.
+ * Handles requests for the login page.
  */
 @Controller
 @RequestMapping(value = "/login")
