@@ -17,33 +17,32 @@ import com.spring.common.Student;
 @Controller
 @RequestMapping(value = "/login")
 public class LoginController {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
-	
+
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping(method = RequestMethod.POST)
-	public String home(@ModelAttribute("login")Login login,
-					   Model model) {
+	public String home(@ModelAttribute("login") Login login, Model model) {
 		logger.info("Logging in for user {}.", login.getUsername());
-		
+
 		Student student = new Student("Zakir", 28, 8059);
-		
-		if(validatePassword(login)) {
+
+		if (validatePassword(login)) {
 			model.addAttribute("student", student);
 			return "loginSuccess";
-		}else {
-			model.addAttribute("message", "User login was unsuccessful for "+login.getUsername());
+		} else {
+			model.addAttribute("message", "User login was unsuccessful for " + login.getUsername());
 			return "loginFail";
 		}
 	}
-	
+
 	private boolean validatePassword(Login login) {
-		if("zakir".equals(login.getUsername()) && "reset123".equals(login.getPassword())){
+		if ("zakir".equals(login.getUsername()) && "reset123".equals(login.getPassword())) {
 			return true;
 		}
 		return false;
 	}
-	
+
 }
