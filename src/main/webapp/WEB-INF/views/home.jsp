@@ -6,19 +6,19 @@
 <title>Home</title>
 </head>
 <body>
-	<h1>Hello ${name}!</h1>
+	<div align="center">
+		<h1>Student Login</h1>
 
-	<P>The time on the server is ${serverTime}.</P>
-
-	<form:form method="POST" action="/student/login" modelAttribute="login">
-		<form:label path="username">Username</form:label>
-		<form:input path="username" />
-		<br />
-		<form:label path="password">Password</form:label>
-		<form:input path="password" />
-		<br />
-		<input type="submit" value="Submit" />
-	</form:form>
-
+		<form:form method="POST" action="/student/login"
+			modelAttribute="login">
+			<form:label path="username">Username</form:label>
+			<form:input path="username" />
+			<br />
+			<form:label path="password">Password</form:label>
+			<form:input path="password" />
+			<br />
+			<input type="submit" value="Submit" />
+		</form:form>
+	</div>
 </body>
 </html>

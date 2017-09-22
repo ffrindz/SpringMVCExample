@@ -9,14 +9,22 @@
 
 	<table border="1">
 		<tr>
-			<th>Name</th>
-			<th>Age</th>
-			<th>RollNo</th>
+			<th>Student ID</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>email</th>
+			<th>Phone Number</th>
+			<th>Class Enrolled</th>
 		</tr>
 		<tr>
-			<td>${student.name}</td>
-			<td>${student.age}</td>
-			<td>${student.rollNo}</td>
+			<c:forEach items="${student}" var="student">
+				<td>${student.id}</td>
+				<td>${student.firstName}</td>
+				<td>${student.lastName}</td>
+				<td>${student.email}</td>
+				<td>${student.phoneNo}</td>
+				<td>${student.class_id}</td>
+			</c:forEach>
 		</tr>
 	</table>
 </body>
