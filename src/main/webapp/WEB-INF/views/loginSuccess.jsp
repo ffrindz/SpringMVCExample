@@ -16,16 +16,16 @@
 			<th>Phone Number</th>
 			<th>Class Enrolled</th>
 		</tr>
-		<tr>
-			<c:forEach items="${student}" var="student">
+		<c:forEach items="${student}" var="student">
+			<tr>
 				<td>${student.id}</td>
 				<td>${student.firstName}</td>
 				<td>${student.lastName}</td>
 				<td>${student.email}</td>
 				<td>${student.phoneNo}</td>
 				<td>${student.class_id}</td>
-			</c:forEach>
-		</tr>
+			</tr>
+		</c:forEach>
 	</table>
 </body>
 </html>
